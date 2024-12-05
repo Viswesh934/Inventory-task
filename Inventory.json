@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": "3",
+            "name": "Milk",
+            "price": 50,
+            "quantity": 100,
+            "expiryDate": "05-12-2021",
+            "category": "Dairy",
+            "supplier": "Supplier1"
+        },
+        {
+            "id": "4",
+            "name": "pepper",
+            "price": 100,
+            "quantity": 200,
+            "expiryDate": "12-12-2023",
+            "category": "food",
+            "supplier": "Supplier2"
+        }
+    ],
+    "suppliers": [
+        {
+            "name": "Supplier1",
+            "contact": "",
+            "products": [
+                "3"
+            ]
+        },
+        {
+            "name": "Supplier2",
+            "contact": "",
+            "products": [
+                "4"
+            ]
+        }
+    ],
+    "categories": [
+        {
+            "name": "Dairy",
+            "subcategory": [
+                "Dairy"
+            ]
+        },
+        {
+            "name": "food",
+            "subcategory": [
+                "food"
+            ]
+        }
+    ]
+}
