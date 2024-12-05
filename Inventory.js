@@ -11,7 +11,7 @@ class Product{
         this.supplier=supplier;
     }
 
-    display(){
+    show(){
         return{
             id:this.id,
             name:this.name,
@@ -34,7 +34,7 @@ class Category{
     addsub(sub){
         this.subcategory.add(sub);
     }
-    display(){
+    show(){
         return{
             name:this.name,
             subcategory:[...this.subcategory]
@@ -52,7 +52,7 @@ class Suppliers{
         this.products.add(productname);
     }
 
-    display(){
+    show(){
         return{
             id:this.id,
             name:this.name,
@@ -127,9 +127,9 @@ class Inventory{
 
         writefile(filename){
             const inventory={
-               "products": [...this.products.values()].map((product) => product.display()),
-                "suppliers": [...this.suppliers.values()].map((supplier) => supplier.display()),
-                "categories": [...this.categories.values()].map((category) => category.display()),
+               "products": [...this.products.values()].map((product) => product.show()),
+                "suppliers": [...this.suppliers.values()].map((supplier) => supplier.show()),
+                "categories": [...this.categories.values()].map((category) => category.show()),
             }
             fs.writeFileSync(filename,JSON.stringify(inventory,null,4));
         }
